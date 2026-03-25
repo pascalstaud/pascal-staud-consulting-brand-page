@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pascal Staud — Brand & Growth Architect</title>
+<meta name="description" content="Principal-level brand architecture and growth systems for founder-led companies and premium brands. BMW, Mercedes-AMG, Piëch, HOF.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --black: #0D0D0D;
+  --dark: #1A1A1A;
+  --text: #1A1A1A;
+  --text-secondary: #4A4A4A;
+  --text-muted: #8A8A8A;
+  --border: #E0E0E0;
+  --border-light: #E8E8E8;
+  --bg: #FFFFFF;
+  --bg-warm: #F8F8F6;
+  --bg-dark: #0D0D0D;
+  --accent: #1A2744;
+  --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --max-w: 960px;
+  --pad: 48px;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font);
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.6;
+}
+
+/* ── Navigation ── */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: rgba(255,255,255,0.96);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border-light);
+  transition: transform 0.3s ease;
+}
+
+nav.hidden { transform: translateY(-100%); }
+
+.nav-inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 var(--pad);
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-brand {
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+  list-style: none;
+}
+
+.nav-links a {
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover { color: var(--text); }
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 18px;
+  height: 1.5px;
+  background: var(--text);
+  margin: 4px 0;
+  transition: all 0.3s;
+}
+
+/* ── Container ── */
+.container {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding-left: var(--pad);
+  padding-right: var(--pad);
+}
+
+/* ── Sections ── */
+.s {
+  padding: 120px 0;
+}
+
+.s-sm { padding: 80px 0; }
+
+.s-hero {
+  padding-top: 160px;
+  padding-bottom: 120px;
+}
+
+.s-dark {
+  background: var(--bg-dark);
+}
+
+.s-warm {
+  background: var(--bg-warm);
+}
+
+/* ── Typography ── */
+h1 {
+  font-size: clamp(32px, 4.5vw, 48px);
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  color: var(--text);
+}
+
+h2 {
+  font-size: clamp(24px, 3vw, 36px);
+  font-weight: 400;
+  letter-spacing: -0.025em;
+  line-height: 1.2;
+  color: var(--text);
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+  color: var(--text);
+}
+
+.subline {
+  font-size: clamp(16px, 1.8vw, 19px);
+  font-weight: 300;
+  color: var(--text-secondary);
+  line-height: 1.55;
+  margin-top: 20px;
+  max-width: 560px;
+}
+
+p.body {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  max-width: 600px;
+}
+
+p.body + p.body { margin-top: 16px; }
+
+.tag {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.light { color: #fff; }
+.light-sub { color: rgba(255,255,255,0.55); }
+.light-body { color: rgba(255,255,255,0.7); }
+
+/* ── Buttons ── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font);
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-primary {
+  background: var(--dark);
+  color: #fff;
+  padding: 13px 28px;
+  border-radius: 2px;
+}
+
+.btn-primary:hover { background: var(--accent); }
+
+.btn-light {
+  background: #fff;
+  color: var(--dark);
+  padding: 13px 28px;
+  border-radius: 2px;
+}
+
+.btn-light:hover { background: #f0f0f0; }
+
+.btn-text {
+  color: var(--text);
+  padding: 0;
+  background: none;
+}
+
+.btn-text:hover { color: var(--text-muted); }
+
+.arrow { transition: transform 0.2s; }
+.btn:hover .arrow { transform: translateX(4px); }
+
+/* ── Proof Strip ── */
+.proof-strip {
+  padding: 48px 0;
+  border-top: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.proof-logos {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.proof-logo {
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  opacity: 0.65;
+}
+
+/* ── Two-Track ── */
+.track-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: var(--border-light);
+}
+
+.track-card {
+  padding: 48px 40px;
+  background: var(--bg-warm);
+}
+
+.track-card .tag { margin-bottom: 16px; display: block; }
+
+.track-card p {
+  font-size: 15px;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  max-width: 400px;
+  margin-bottom: 20px;
+}
+
+/* ── Pillar Grid ── */
+.pillar-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px 56px;
+}
+
+.pillar h3 { margin-bottom: 8px; }
+
+.pillar p {
+  font-size: 15px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* ── Model Grid ── */
+.model-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 48px;
+}
+
+.model-card {
+  padding: 32px 28px;
+  border: 1px solid var(--border-light);
+}
+
+.model-card h3 { margin-bottom: 2px; }
+
+.model-sub {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 14px;
+}
+
+.model-card p.desc {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* ── Value Framework ── */
+.value-cols {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 48px;
+}
+
+.value-card {
+  padding: 32px 28px;
+  background: var(--bg-warm);
+  border-top: 2px solid var(--dark);
+}
+
+.value-card .val-num {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+  margin-bottom: 8px;
+}
+
+.value-card h3 { margin-bottom: 8px; font-size: 17px; }
+
+.value-card p {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* ── Process ── */
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+  margin-top: 48px;
+}
+
+.process-step {
+  padding: 24px 20px;
+  background: var(--bg-warm);
+  border-top: 2px solid var(--border);
+}
+
+.process-step.active-step { border-top-color: var(--dark); }
+
+.process-step .step-num {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+  margin-bottom: 6px;
+}
+
+.process-step h4 {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.process-step p {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* ── Cases ── */
+.case-block {
+  padding: 56px 0;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.case-block:first-of-type {
+  border-top: 1px solid var(--border-light);
+}
+
+.case-tag { margin-bottom: 12px; }
+
+.case-block h3 {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+.case-block p.case-body {
+  font-size: 15px;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  max-width: 600px;
+  margin-bottom: 16px;
+}
+
+.case-kpis {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.case-kpi {
+  padding: 16px 20px;
+  background: var(--bg-warm);
+  border-left: 2px solid var(--border);
+}
+
+.case-kpi .kpi-label {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+}
+
+.case-kpi p {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.case-quote {
+  margin-top: 24px;
+  padding: 20px 24px;
+  border-left: 2px solid var(--dark);
+  background: var(--bg-warm);
+}
+
+.case-quote p {
+  font-size: 15px;
+  color: var(--text);
+  font-style: italic;
+  line-height: 1.6;
+}
+
+.case-quote .quote-attr {
+  font-size: 13px;
+  font-style: normal;
+  color: var(--text-muted);
+  margin-top: 8px;
+}
+
+/* ── Principles ── */
+.principles-block {
+  padding: 48px;
+  background: var(--bg-warm);
+  margin: 48px 0;
+}
+
+.principles-block p {
+  font-size: 17px;
+  font-weight: 400;
+  color: var(--text);
+  line-height: 2.2;
+}
+
+/* ── Stations ── */
+.stations {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.station {
+  padding: 24px 28px;
+  border: 1px solid var(--border-light);
+}
+
+.station h4 {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.station .station-role {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+}
+
+.station p {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* ── Contact Qualifier ── */
+.qualifier {
+  margin-top: 48px;
+  padding-top: 40px;
+  border-top: 1px solid var(--border-light);
+}
+
+.qualifier .q-label {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text);
+  margin-bottom: 12px;
+}
+
+.qualifier p {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.8;
+}
+
+/* ── Spacer ── */
+.spacer-line {
+  height: 1px;
+  background: var(--border-light);
+}
+
+.mt-48 { margin-top: 48px; }
+.mt-32 { margin-top: 32px; }
+.mt-24 { margin-top: 24px; }
+.mt-16 { margin-top: 16px; }
+.mb-48 { margin-bottom: 48px; }
+
+/* ── Mobile ── */
+@media (max-width: 768px) {
+  :root { --pad: 24px; }
+
+  .nav-links { display: none; }
+  .nav-links.open {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 56px;
+    left: 0;
+    right: 0;
+    background: rgba(255,255,255,0.98);
+    padding: 24px;
+    gap: 20px;
+    border-bottom: 1px solid var(--border-light);
+  }
+  .nav-links.open a { font-size: 15px; }
+  .nav-toggle { display: block; }
+
+  .s { padding: 72px 0; }
+  .s-hero { padding-top: 120px; padding-bottom: 72px; }
+
+  .track-grid { grid-template-columns: 1fr; }
+  .pillar-grid { grid-template-columns: 1fr; gap: 32px; }
+  .model-grid { grid-template-columns: 1fr; }
+  .value-cols { grid-template-columns: 1fr; }
+  .process-steps { grid-template-columns: 1fr; }
+  .case-kpis { grid-template-columns: 1fr; }
+  .stations { grid-template-columns: 1fr; }
+
+  .proof-logos { gap: 20px 28px; }
+}
+
+/* ── Scroll Reveal ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Footer ── */
+footer {
+  padding: 40px 0;
+  border-top: 1px solid var(--border-light);
+}
+
+footer p {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+</style>
+</head>
+<body>
+
+
+<!-- ═══════ NAV ═══════ -->
+<nav>
+  <div class="nav-inner">
+    <a href="#top" class="nav-brand">Pascal Staud</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#work">Work</a></li>
+      <li><a href="#founders">Founders</a></li>
+      <li><a href="#brands">Brands</a></li>
+      <li><a href="#cases">Cases</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+
+<!-- ═══════ HERO ═══════ -->
+<section id="top" class="s-hero" style="min-height: 80vh; display: flex; align-items: center;">
+  <div class="container">
+    <h1>Clarity that becomes<br>operational.</h1>
+    <p class="subline">Brand & Growth Architect. Principal-level. Founder-close.<br>I install the systems that let companies grow without heroics.</p>
+    <div class="mt-48">
+      <a href="#work" class="btn btn-primary">How I work <span class="arrow">&rarr;</span></a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════ PROOF STRIP ═══════ -->
+<div class="proof-strip">
+  <div class="container">
+    <div class="proof-logos">
+      <span class="proof-logo">BMW</span>
+      <span class="proof-logo">Mercedes-AMG</span>
+      <span class="proof-logo">Pi&euml;ch</span>
+      <span class="proof-logo">HOF</span>
+      <span class="proof-logo">Aston Martin</span>
+      <span class="proof-logo">Richard Mille</span>
+      <span class="proof-logo">Infiniti</span>
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══════ TWO-TRACK ENTRY ═══════ -->
+<section class="s-sm">
+  <div class="container">
+    <div class="track-grid">
+      <div class="track-card">
+        <span class="tag">For founders</span>
+        <p>Positioning, narrative, GTM architecture, and a decision cadence that holds. Principal-level &mdash; not a vendor.</p>
+        <a href="#founders" class="btn btn-text">How I work with founders <span class="arrow">&rarr;</span></a>
+      </div>
+      <div class="track-card">
+        <span class="tag">For premium brands & OEMs</span>
+        <p>Global alignment, partner orchestration, and standards that scale. Expertise at the highest level.</p>
+        <a href="#brands" class="btn btn-text">How I work with brand teams <span class="arrow">&rarr;</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════ WORK ═══════ -->
+<section id="work" class="s">
+  <div class="container">
+    <span class="tag mb-48" style="display:block;">What I install</span>
+    <h2>Not a service menu.<br>An operating sequence.</h2>
+    <p class="subline">Market frame &rarr; narrative &rarr; GTM architecture &rarr; decision cadence &rarr; standards.</p>
+
+    <div class="pillar-grid mt-48 reveal">
+      <div class="pillar">
+        <h3>Direction & Offer Architecture</h3>
+        <p>Positioning. Category design. Offer logic. What you do, what you stop, why someone buys.</p>
+      </div>
+      <div class="pillar">
+        <h3>Growth System</h3>
+        <p>Channels, targeting, partnerships. Messaging that sales uses. KPI cadence that surfaces reality.</p>
+      </div>
+      <div class="pillar">
+        <h3>Decision System</h3>
+        <p>Owner per workstream. Definition of done. A weekly exec that produces decisions, not status updates.</p>
+      </div>
+      <div class="pillar">
+        <h3>Team Architecture</h3>
+        <p>Roles by accountability. An operator layer that holds timelines. Standards so quality is repeatable.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<div class="container"><div class="spacer-line"></div></div>
+
+
+<!-- ═══════ ENGAGEMENT MODELS ═══════ -->
+<section class="s">
+  <div class="container">
+    <h2>How engagements work</h2>
+    <div class="model-grid reveal">
+      <div class="model-card">
+        <h3>Retained</h3>
+        <p class="model-sub">Principal continuity</p>
+        <p class="desc">12+ months. Weekly cadence. I stay until the system runs without me.</p>
+      </div>
+      <div class="model-card">
+        <h3>Project Advisory</h3>
+        <p class="model-sub">High-stakes moments</p>
+        <p class="desc">Repositioning, launch, market entry. Intensive, then done.</p>
+      </div>
+      <div class="model-card">
+        <h3>Hybrid</h3>
+        <p class="model-sub">Retained + equity</p>
+        <p class="desc">Retainer plus equity. My upside is your upside.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════ DARK CTA ═══════ -->
+<section class="s-dark" style="padding: 80px 0; text-align: center;">
+  <div class="container">
+    <h2 class="light">The right conversation<br>starts with clarity.</h2>
+    <div class="mt-32">
+      <a href="#contact" class="btn btn-light">Start a conversation <span class="arrow">&rarr;</span></a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════ FOUNDERS ═══════ -->
+<section id="founders" class="s">
+  <div class="container">
+    <span class="tag" style="display:block; margin-bottom: 16px;">For founders</span>
+    <h2>You don't need another advisor.<br>You need architecture.</h2>
+
+    <div class="mt-32" style="max-width: 600px;">
+      <p class="body">Most ventures don't lack ambition. They lack the operating layer between ambition and execution. I work alongside founders &mdash; not above, not behind. Market frame, narrative, GTM architecture, decision cadence, standards.</p>
+      <p class="body">Not consultancy. Not an agency. A hybrid growth accelerator &mdash; capital-aware, execution-grade, committed to the same outcome you are.</p>
+    </div>
+  </div>
+</section>
+
+
+<div class="container"><div class="spacer-line"></div></div>
+
+
+<!-- ═══════ CLV / VALUE FRAMEWORK ═══════ -->
+<section class="s">
+  <div class="container">
+    <span class="tag" style="display:block; margin-bottom: 16px;">The model</span>
+    <h2>Private equity thinking<br>applied to marketing.</h2>
+
+    <div class="mt-24" style="max-width: 600px;">
+      <p class="body">Marketing is the strongest value driver &mdash; and the most underutilized. I treat every mandate as a value creation exercise. Equity entitlement tied to defined uplift, not hours billed.</p>
+      <p class="body">One to two mandates per year. I grow with them. I stay until the system runs.</p>
+    </div>
+
+    <div class="value-cols reveal">
+      <div class="value-card">
+        <p class="val-num">01</p>
+        <h3>Entry Value</h3>
+        <p>Revenue, customer base, brand awareness. Where the company stands before we start.</p>
+      </div>
+      <div class="value-card">
+        <p class="val-num">02</p>
+        <h3>Contribution Value</h3>
+        <p>Brand strength, conversion uplift, capital efficiency. The measurable delta my architecture creates.</p>
+      </div>
+      <div class="value-card">
+        <p class="val-num">03</p>
+        <h3>Realized Value</h3>
+        <p>Exit valuation or next round multiple. Equity = percentage of defined uplift.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<div class="container"><div class="spacer-line"></div></div>
+
+
+<!-- ═══════ THE PROCESS ═══════ -->
+<section class="s">
+  <div class="container">
+    <span class="tag" style="display:block; margin-bottom: 16px;">The process</span>
+    <h2>From alignment to exit.</h2>
+
+    <div class="process-steps reveal">
+      <div class="process-step active-step">
+        <p class="step-num">01</p>
+        <h4>Synchronize</h4>
+        <p>Reality check. Marketing maturity. Operational baseline.</p>
+      </div>
+      <div class="process-step active-step">
+        <p class="step-num">02</p>
+        <h4>Strategize</h4>
+        <p>Growth roadmap, valuation logic, GTM strategy.</p>
+      </div>
+      <div class="process-step active-step">
+        <p class="step-num">03</p>
+        <h4>Simulate</h4>
+        <p>Model investment impact. Refine strategy. Set milestones.</p>
+      </div>
+      <div class="process-step active-step">
+        <p class="step-num">04</p>
+        <h4>Steer</h4>
+        <p>Build teams. Onboard partners. Run the system.</p>
+      </div>
+      <div class="process-step">
+        <p class="step-num">05</p>
+        <h4>Support & Exit</h4>
+        <p>Transition to advisory. Or full exit when the system holds.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════ BRANDS / OEM ═══════ -->
+<section id="brands" class="s-warm" style="padding: 120px 0;">
+  <div class="container">
+    <span class="tag" style="display:block; margin-bottom: 16px;">For premium brands</span>
+    <h2>Your brand has global standards.<br>Your partners should meet them.</h2>
+
+    <div class="mt-32" style="max-width: 600px;">
+      <p class="body">Brand standards into operational reality &mdash; across partners, markets, and production pipelines. BMW. Mercedes-AMG. Pi&euml;ch. Aston Martin. The mandate varies. The standard does not.</p>
+    </div>
+
+    <div class="pillar-grid mt-48 reveal">
+      <div class="pillar">
+        <h3>Global Alignment</h3>
+        <p>Partners, production, regional execution &mdash; orchestrated to one standard.</p>
+      </div>
+      <div class="pillar">
+        <h3>Clear Direction</h3>
+        <p>One brief, one standard, one accountable person.</p>
+      </div>
+      <div class="pillar">
+        <h3>Delivery Reliability</h3>
+        <p>On time, on quality, at scale. Documented and enforceable.</p>
+      </div>
+      <div class="pillar">
+        <h3>Orchestration</h3>
+        <p>Lead agency advisory, campaign architecture, partner alignment.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════ CASES ═══════ -->
+<section id="cases" class="s">
+  <div class="container">
+    <span class="tag" style="display:block; margin-bottom: 16px;">Selected work</span>
+    <h2>Five mandates. Same discipline.</h2>
+    <p class="subline">Different contexts. Same operating sequence: clarity, architecture, decisions, standards.</p>
+
+    <!-- BMW -->
+    <div class="case-block reveal">
+      <span class="tag case-tag" style="display:block;">OEM / Campaign Architecture</span>
+      <h3>BMW &mdash; Building the Marketing Engine</h3>
+      <p class="case-body">World-class products, outdated go-to-market system. Campaigns disconnected across European markets. I designed a unified MarCom Engine connecting strategy, content, and media execution.</p>
+      <div class="case-kpis">
+        <div class="case-kpi">
+          <p class="kpi-label">Process</p>
+          <p>Reduced rollout time and content duplication across EU markets</p>
+        </div>
+        <div class="case-kpi">
+          <p class="kpi-label">Alignment</p>
+          <p>Unified MarCom playbook: brand, performance, media</p>
+        </div>
+        <div class="case-kpi">
+          <p class="kpi-label">Data</p>
+          <p>Closed feedback loop: creative, spend, performance</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mercedes-AMG -->
+    <div class="case-block reveal">
+      <span class="tag case-tag" style="display:block;">OEM / Orchestration</span>
+      <h3>Mercedes-AMG &mdash; Global Lead Agency Advisory</h3>
+      <p class="case-body">Brand standards non-negotiable, execution complexity extreme. Advised on global lead agency alignment &mdash; brand direction, agency delivery, production quality across markets.</p>
+      <div class="case-kpis">
+        <div class="case-kpi">
+          <p class="kpi-label">Framework</p>
+          <p>Agency alignment architecture across global markets</p>
+        </div>
+        <div class="case-kpi">
+          <p class="kpi-label">Quality</p>
+          <p>Production governance at AMG performance standards</p>
+        </div>
+        <div class="case-kpi">
+          <p class="kpi-label">Cadence</p>
+          <p>Global delivery rhythm with clear accountability</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Piëch -->
+    <div class="case-block reveal">
+      <span class="tag case-tag" style="display:block;">Founder-led / Brand Repositioning</span>
+      <h3>Pi&euml;ch &mdash; Back on the Investor Radar</h3>
+      <p class="case-body">Lost investor visibility, fading brand traction. Repositioned the founder story and built a content-driven brand engine to reignite Pi&euml;ch as the next cult sports car brand.</p>
+      <div class="case-kpis">
+        <div class="case-kpi">
+          <p class="kpi-label">Brand Reset</p>
+          <p>Re-entered investor and media radar across key outlets</p>
+        </div>
+        <div class="case-kpi">
+          <p class="kpi-label">Content</p>
+          <p>High-impact, low-cost brand engine across film, podcast, web, and press</p>
+        </div>
+        <div class="case-kpi">
+          <p class="kpi-label">Capital</p>
+          <p>First investors reactivated, &euro;50M A2-Series in active pipeline</p>
+        </div>
+      </div>
+      <div class="case-quote">
+        <p>&ldquo;Without the help of Pascal we would have ended up in nowhere land. We weren't on any investor radar anymore.&rdquo;</p>
+        <p class="quote-attr">Tobias Moers, CEO</p>
+      </div>
+    </div>
+
+    <!-- HOF -->
+    <div class="case-block reveal">
+      <span class="tag case-tag" style="display:block;">Founder-led / Brand & Growth</span>
+      <h3>HOF &mdash; From Tuner to Luxury Automotive Brand</h3>
+      <p class="case-body">Decades of coachbuilding heritage, untapped luxury potential. Repositioned HOF as the haute couture of automotive &mdash; founder storytelling, strategic collections, brand-building at the intersection of automotive, fashion, and culture.</p>
+      <div class="case-kpis">
+        <div class="case-kpi">
+          <p class="kpi-label">Brand</p>
+          <p>New platform anchored in &ldquo;German Craftsmanship meets Cultural Luxury&rdquo;</p>
+        </div>
+        <div class="case-kpi">
+          <p class="kpi-label">System</p>
+          <p>Modular content, CRM, website, and showroom-ready dealer toolkit</p>
+        </div>
+        <div class="case-kpi">
+          <p class="kpi-label">Traction</p>
+          <p>Emirates Motor Company partnership signed, active investor conversations</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- AERA -->
+    <div class="case-block reveal">
+      <span class="tag case-tag" style="display:block;">Founder-led / Health &amp; Venture</span>
+      <h3>AERA Health &mdash; The Operating System for Longevity</h3>
+      <p class="case-body">Strong founding vision, no go-to-market model or investor positioning. Transformed AERA from idea to high-conviction, scalable health tech venture.</p>
+      <div class="case-kpis">
+        <div class="case-kpi">
+          <p class="kpi-label">Positioning</p>
+          <p>AERA defined as the &ldquo;OS for Longevity&rdquo; &mdash; medically credible, emotionally aspirational</p>
+        </div>
+        <div class="case-kpi">
+          <p class="kpi-label">GTM</p>
+          <p>Signature City model defined; first ecosystem live in London</p>
+        </div>
+        <div class="case-kpi">
+          <p class="kpi-label">Capital</p>
+          <p>&euro;750K bridge round in motion with pitch material and investor funnel live</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ═══════ ABOUT ═══════ -->
+<section id="about" class="s-warm" style="padding: 120px 0;">
+  <div class="container">
+    <span class="tag" style="display:block; margin-bottom: 16px;">About</span>
+    <h2>Pascal Staud.</h2>
+    <p class="subline">Brand & Growth Architect. Principal-level. Founder-close.</p>
+
+    <div class="mt-32" style="max-width: 600px;">
+      <p class="body">15 years at the intersection of premium brands and founder-led ventures &mdash; as strategist, operator, and architect. BMW, Mercedes-AMG, Pi&euml;ch, Aston Martin on the OEM side. HOF and AERA on the venture side. I install systems and stay until they hold.</p>
+    </div>
+
+    <div class="principles-block reveal">
+      <p>Decisions, not discussions.<br>
+      Owners, not committees.<br>
+      Reality, not narratives.<br>
+      Standards, not taste.<br>
+      Systems, not heroes.</p>
+    </div>
+
+    <div class="stations reveal">
+      <div class="station">
+        <h4>Pascal Staud Consulting</h4>
+        <p class="station-role">Brand & Growth Architect &middot; 2024 &ndash; present</p>
+        <p>Principal-level mandates across automotive, luxury, and health. Retained + equity model.</p>
+      </div>
+      <div class="station">
+        <h4>Monks (MediaMonks)</h4>
+        <p class="station-role">Co-Founder &middot; 2021 &ndash; 2025</p>
+        <p>Global marketing service company. 7,000+ team across all disciplines.</p>
+      </div>
+      <div class="station">
+        <h4>STAUD STUDIOS</h4>
+        <p class="station-role">Managing Director &middot; 2009 &ndash; 2021</p>
+        <p>Marketing service company. Automotive and luxury focus. Grew from 25 to 100.</p>
+      </div>
+      <div class="station">
+        <h4>Education</h4>
+        <p class="station-role">Zeppelin University &middot; Tongji University Shanghai</p>
+        <p>BA Corporate Management & Economics. Additional studies in Chinese Studies.</p>
+      </div>
+    </div>
+
+    <p class="body mt-48" style="color: var(--text-muted); font-size: 14px;">Based in Germany. Working internationally.<br>Currently taking select retained mandates.</p>
+  </div>
+</section>
+
+
+<!-- ═══════ CONTACT ═══════ -->
+<section id="contact" class="s">
+  <div class="container">
+    <span class="tag" style="display:block; margin-bottom: 16px;">Contact</span>
+    <h2>The right engagement starts<br>with a clear conversation.</h2>
+
+    <div class="mt-24" style="max-width: 560px;">
+      <p class="body">No intake forms. No sales funnel. One conversation to determine fit.</p>
+    </div>
+
+    <div class="mt-32">
+      <a href="mailto:ps@pascalstaud.com" class="btn btn-primary">Write to me <span class="arrow">&rarr;</span></a>
+    </div>
+
+    <div class="qualifier">
+      <p class="q-label">This works best when:</p>
+      <p>There is a real owner who makes and holds decisions.<br>
+      The ambition is clear, even if the path is not.<br>
+      You are willing to stop things that don't serve the direction.<br>
+      You value standards over speed.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════ FOOTER ═══════ -->
+<footer>
+  <div class="container">
+    <p>&copy; 2026 Pascal Staud</p>
+  </div>
+</footer>
+
+
+<!-- ═══════ JS ═══════ -->
+<script>
+// Nav hide on scroll down
+let lastY = 0;
+window.addEventListener('scroll', () => {
+  const nav = document.querySelector('nav');
+  const y = window.scrollY;
+  if (y > lastY && y > 80) nav.classList.add('hidden');
+  else nav.classList.remove('hidden');
+  lastY = y;
+}, { passive: true });
+
+// Scroll reveal
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.08 });
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+// Close mobile nav on link click
+document.querySelectorAll('.nav-links a').forEach(a => {
+  a.addEventListener('click', () => {
+    document.getElementById('navLinks').classList.remove('open');
+  });
+});
+</script>
+
+</body>
+</html>
