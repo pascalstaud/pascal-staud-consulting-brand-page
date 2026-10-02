@@ -3,1084 +3,299 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pascal Staud — Brand & Growth Architect</title>
-<meta name="description" content="Principal-level brand architecture and growth systems for founder-led companies and premium brands. BMW, Mercedes-AMG, Piëch, HOF.">
+<title>Pascal Staud | Brand and marketing consultant for automotive, luxury, tech and health</title>
+<meta name="description" content="Pascal Staud is a brand and marketing consultant for owners and brands in automotive and mobility, luxury and direct-to-consumer, tech and digital startups, and health. Twenty years as founder, agency leader and consultant, with brands such as BMW, Mercedes-AMG, Aston Martin and Richard Mille.">
+<link rel="canonical" href="https://www.pascalstaud.com/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.pascalstaud.com/">
+<meta property="og:title" content="Pascal Staud | Brand and marketing consultant">
+<meta property="og:description" content="Brand is the most untapped asset in most companies. Brand and marketing consulting for automotive, luxury, tech and health.">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Person", "@id": "https://www.pascalstaud.com/#person", "name": "Pascal Staud", "url": "https://www.pascalstaud.com/", "sameAs": ["https://www.linkedin.com/in/pascalstaud/"], "jobTitle": "Brand and marketing consultant", "description": "Pascal Staud is a brand and marketing consultant for owners and brands in automotive and mobility, luxury and direct-to-consumer, tech and digital startups, and health. Twenty years as founder, agency leader and consultant, with brands such as BMW, Mercedes-AMG, Aston Martin and Richard Mille.", "knowsAbout": ["Brand strategy", "Marketing strategy", "Marketing organisation and agency setup", "AI in marketing", "Automotive marketing", "Mobility", "Luxury brands", "Direct-to-consumer", "Tech and digital startups", "Healthcare marketing"], "alumniOf": [{"@type": "CollegeOrUniversity", "name": "Zeppelin University"}, {"@type": "CollegeOrUniversity", "name": "Tongji University"}], "worksFor": {"@id": "https://www.pascalstaud.com/#business"}}, {"@type": "ProfessionalService", "@id": "https://www.pascalstaud.com/#business", "name": "Pascal Staud Consulting", "url": "https://www.pascalstaud.com/", "founder": {"@id": "https://www.pascalstaud.com/#person"}, "description": "Pascal Staud is a brand and marketing consultant for owners and brands in automotive and mobility, luxury and direct-to-consumer, tech and digital startups, and health. Twenty years as founder, agency leader and consultant, with brands such as BMW, Mercedes-AMG, Aston Martin and Richard Mille.", "areaServed": "Worldwide", "address": {"@type": "PostalAddress", "addressCountry": "DE"}, "serviceType": ["Brand consulting", "Marketing consulting", "Marketing organisation advisory"]}]}</script>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-10 -10 117 117'%3E%3Cpath d='M 15.375 96.418 L 17.105 88.77 L 76.242 88.77 L 79.664 74.051 L 20.434 74.051 L 27.223 44.027 L 97.258 44.027 L 95.527 51.68 L 37.402 51.68 L 34.074 66.398 L 92.199 66.398 L 85.41 96.418 Z'/%3E%3Cpath d='M 0 51.684 L 6.625 22.371 L 66.688 22.371 L 70.012 7.652 L 9.953 7.652 L 11.684 0 L 81.719 0 L 74.93 30.023 L 16.031 30.023 L 11.137 51.684 Z'/%3E%3C/svg%3E">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..600&family=DM+Sans:opsz,wght@9..40,400..600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-
-:root {
-  --black: #0D0D0D;
-  --dark: #1A1A1A;
-  --text: #1A1A1A;
-  --text-secondary: #4A4A4A;
-  --text-muted: #8A8A8A;
-  --border: #E0E0E0;
-  --border-light: #E8E8E8;
-  --bg: #FFFFFF;
-  --bg-warm: #F8F8F6;
-  --bg-dark: #0D0D0D;
-  --accent: #1A2744;
-  --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  --max-w: 960px;
-  --pad: 48px;
-}
-
-html {
-  font-size: 16px;
-  scroll-behavior: smooth;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-body {
-  font-family: var(--font);
-  color: var(--text);
-  background: var(--bg);
-  line-height: 1.6;
-}
-
-/* ── Navigation ── */
-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 100;
-  background: rgba(255,255,255,0.96);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border-bottom: 1px solid var(--border-light);
-  transition: transform 0.3s ease;
-}
-
-nav.hidden { transform: translateY(-100%); }
-
-.nav-inner {
-  max-width: var(--max-w);
-  margin: 0 auto;
-  padding: 0 var(--pad);
-  height: 56px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.nav-brand {
-  font-size: 14px;
-  font-weight: 500;
-  letter-spacing: 0.02em;
-  color: var(--text);
-  text-decoration: none;
-}
-
-.nav-links {
-  display: flex;
-  gap: 28px;
-  list-style: none;
-}
-
-.nav-links a {
-  font-size: 13px;
-  font-weight: 400;
-  color: var(--text-muted);
-  text-decoration: none;
-  transition: color 0.2s;
-}
-
-.nav-links a:hover { color: var(--text); }
-
-.nav-toggle {
-  display: none;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 8px;
-}
-
-.nav-toggle span {
-  display: block;
-  width: 18px;
-  height: 1.5px;
-  background: var(--text);
-  margin: 4px 0;
-  transition: all 0.3s;
-}
-
-/* ── Container ── */
-.container {
-  max-width: var(--max-w);
-  margin: 0 auto;
-  padding-left: var(--pad);
-  padding-right: var(--pad);
-}
-
-/* ── Sections ── */
-.s {
-  padding: 120px 0;
-}
-
-.s-sm { padding: 80px 0; }
-
-.s-hero {
-  padding-top: 160px;
-  padding-bottom: 120px;
-}
-
-.s-dark {
-  background: var(--bg-dark);
-}
-
-.s-warm {
-  background: var(--bg-warm);
-}
-
-/* ── Typography ── */
-h1 {
-  font-size: clamp(32px, 4.5vw, 48px);
-  font-weight: 400;
-  letter-spacing: -0.03em;
-  line-height: 1.15;
-  color: var(--text);
-}
-
-h2 {
-  font-size: clamp(24px, 3vw, 36px);
-  font-weight: 400;
-  letter-spacing: -0.025em;
-  line-height: 1.2;
-  color: var(--text);
-}
-
-h3 {
-  font-size: 18px;
-  font-weight: 600;
-  letter-spacing: -0.01em;
-  line-height: 1.3;
-  color: var(--text);
-}
-
-.subline {
-  font-size: clamp(16px, 1.8vw, 19px);
-  font-weight: 300;
-  color: var(--text-secondary);
-  line-height: 1.55;
-  margin-top: 20px;
-  max-width: 560px;
-}
-
-p.body {
-  font-size: 16px;
-  font-weight: 400;
-  color: var(--text-secondary);
-  line-height: 1.7;
-  max-width: 600px;
-}
-
-p.body + p.body { margin-top: 16px; }
-
-.tag {
-  font-size: 11px;
-  font-weight: 500;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--text-muted);
-}
-
-.light { color: #fff; }
-.light-sub { color: rgba(255,255,255,0.55); }
-.light-body { color: rgba(255,255,255,0.7); }
-
-/* ── Buttons ── */
-.btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-family: var(--font);
-  font-size: 14px;
-  font-weight: 500;
-  text-decoration: none;
-  transition: all 0.2s ease;
-  cursor: pointer;
-  border: none;
-}
-
-.btn-primary {
-  background: var(--dark);
-  color: #fff;
-  padding: 13px 28px;
-  border-radius: 2px;
-}
-
-.btn-primary:hover { background: var(--accent); }
-
-.btn-light {
-  background: #fff;
-  color: var(--dark);
-  padding: 13px 28px;
-  border-radius: 2px;
-}
-
-.btn-light:hover { background: #f0f0f0; }
-
-.btn-text {
-  color: var(--text);
-  padding: 0;
-  background: none;
-}
-
-.btn-text:hover { color: var(--text-muted); }
-
-.arrow { transition: transform 0.2s; }
-.btn:hover .arrow { transform: translateX(4px); }
-
-/* ── Proof Strip ── */
-.proof-strip {
-  padding: 48px 0;
-  border-top: 1px solid var(--border-light);
-  border-bottom: 1px solid var(--border-light);
-}
-
-.proof-logos {
-  display: flex;
-  align-items: center;
-  gap: 32px;
-  flex-wrap: wrap;
-}
-
-.proof-logo {
-  font-size: 13px;
-  font-weight: 500;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--text-muted);
-  opacity: 0.65;
-}
-
-/* ── Two-Track ── */
-.track-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1px;
-  background: var(--border-light);
-}
-
-.track-card {
-  padding: 48px 40px;
-  background: var(--bg-warm);
-}
-
-.track-card .tag { margin-bottom: 16px; display: block; }
-
-.track-card p {
-  font-size: 15px;
-  color: var(--text-secondary);
-  line-height: 1.65;
-  max-width: 400px;
-  margin-bottom: 20px;
-}
-
-/* ── Pillar Grid ── */
-.pillar-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px 56px;
-}
-
-.pillar h3 { margin-bottom: 8px; }
-
-.pillar p {
-  font-size: 15px;
-  color: var(--text-secondary);
-  line-height: 1.6;
-}
-
-/* ── Model Grid ── */
-.model-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-  margin-top: 48px;
-}
-
-.model-card {
-  padding: 32px 28px;
-  border: 1px solid var(--border-light);
-}
-
-.model-card h3 { margin-bottom: 2px; }
-
-.model-sub {
-  font-size: 13px;
-  color: var(--text-muted);
-  margin-bottom: 14px;
-}
-
-.model-card p.desc {
-  font-size: 14px;
-  color: var(--text-secondary);
-  line-height: 1.6;
-}
-
-/* ── Value Framework ── */
-.value-cols {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-  margin-top: 48px;
-}
-
-.value-card {
-  padding: 32px 28px;
-  background: var(--bg-warm);
-  border-top: 2px solid var(--dark);
-}
-
-.value-card .val-num {
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--text-muted);
-  letter-spacing: 0.04em;
-  margin-bottom: 8px;
-}
-
-.value-card h3 { margin-bottom: 8px; font-size: 17px; }
-
-.value-card p {
-  font-size: 14px;
-  color: var(--text-secondary);
-  line-height: 1.6;
-}
-
-/* ── Process ── */
-.process-steps {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 16px;
-  margin-top: 48px;
-}
-
-.process-step {
-  padding: 24px 20px;
-  background: var(--bg-warm);
-  border-top: 2px solid var(--border);
-}
-
-.process-step.active-step { border-top-color: var(--dark); }
-
-.process-step .step-num {
-  font-size: 12px;
-  font-weight: 600;
-  color: var(--text-muted);
-  letter-spacing: 0.04em;
-  margin-bottom: 6px;
-}
-
-.process-step h4 {
-  font-size: 14px;
-  font-weight: 600;
-  margin-bottom: 6px;
-}
-
-.process-step p {
-  font-size: 13px;
-  color: var(--text-secondary);
-  line-height: 1.5;
-}
-
-/* ── Cases ── */
-.case-block {
-  padding: 56px 0;
-  border-bottom: 1px solid var(--border-light);
-}
-
-.case-block:first-of-type {
-  border-top: 1px solid var(--border-light);
-}
-
-.case-tag { margin-bottom: 12px; }
-
-.case-block h3 {
-  font-size: 20px;
-  font-weight: 500;
-  margin-bottom: 16px;
-}
-
-.case-block p.case-body {
-  font-size: 15px;
-  color: var(--text-secondary);
-  line-height: 1.65;
-  max-width: 600px;
-  margin-bottom: 16px;
-}
-
-.case-kpis {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-  margin-top: 24px;
-}
-
-.case-kpi {
-  padding: 16px 20px;
-  background: var(--bg-warm);
-  border-left: 2px solid var(--border);
-}
-
-.case-kpi .kpi-label {
-  font-size: 12px;
-  font-weight: 500;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: var(--text-muted);
-  margin-bottom: 4px;
-}
-
-.case-kpi p {
-  font-size: 13px;
-  color: var(--text-secondary);
-  line-height: 1.5;
-}
-
-.case-quote {
-  margin-top: 24px;
-  padding: 20px 24px;
-  border-left: 2px solid var(--dark);
-  background: var(--bg-warm);
-}
-
-.case-quote p {
-  font-size: 15px;
-  color: var(--text);
-  font-style: italic;
-  line-height: 1.6;
-}
-
-.case-quote .quote-attr {
-  font-size: 13px;
-  font-style: normal;
-  color: var(--text-muted);
-  margin-top: 8px;
-}
-
-/* ── Principles ── */
-.principles-block {
-  padding: 48px;
-  background: var(--bg-warm);
-  margin: 48px 0;
-}
-
-.principles-block p {
-  font-size: 17px;
-  font-weight: 400;
-  color: var(--text);
-  line-height: 2.2;
-}
-
-/* ── Stations ── */
-.stations {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 24px;
-  margin-top: 40px;
-}
-
-.station {
-  padding: 24px 28px;
-  border: 1px solid var(--border-light);
-}
-
-.station h4 {
-  font-size: 14px;
-  font-weight: 600;
-  margin-bottom: 2px;
-}
-
-.station .station-role {
-  font-size: 13px;
-  color: var(--text-muted);
-  margin-bottom: 6px;
-}
-
-.station p {
-  font-size: 13px;
-  color: var(--text-secondary);
-  line-height: 1.5;
-}
-
-/* ── Contact Qualifier ── */
-.qualifier {
-  margin-top: 48px;
-  padding-top: 40px;
-  border-top: 1px solid var(--border-light);
-}
-
-.qualifier .q-label {
-  font-size: 13px;
-  font-weight: 500;
-  color: var(--text);
-  margin-bottom: 12px;
-}
-
-.qualifier p {
-  font-size: 14px;
-  color: var(--text-muted);
-  line-height: 1.8;
-}
-
-/* ── Spacer ── */
-.spacer-line {
-  height: 1px;
-  background: var(--border-light);
-}
-
-.mt-48 { margin-top: 48px; }
-.mt-32 { margin-top: 32px; }
-.mt-24 { margin-top: 24px; }
-.mt-16 { margin-top: 16px; }
-.mb-48 { margin-bottom: 48px; }
-
-/* ── Mobile ── */
-@media (max-width: 768px) {
-  :root { --pad: 24px; }
-
-  .nav-links { display: none; }
-  .nav-links.open {
-    display: flex;
-    flex-direction: column;
-    position: fixed;
-    top: 56px;
-    left: 0;
-    right: 0;
-    background: rgba(255,255,255,0.98);
-    padding: 24px;
-    gap: 20px;
-    border-bottom: 1px solid var(--border-light);
-  }
-  .nav-links.open a { font-size: 15px; }
-  .nav-toggle { display: block; }
-
-  .s { padding: 72px 0; }
-  .s-hero { padding-top: 120px; padding-bottom: 72px; }
-
-  .track-grid { grid-template-columns: 1fr; }
-  .pillar-grid { grid-template-columns: 1fr; gap: 32px; }
-  .model-grid { grid-template-columns: 1fr; }
-  .value-cols { grid-template-columns: 1fr; }
-  .process-steps { grid-template-columns: 1fr; }
-  .case-kpis { grid-template-columns: 1fr; }
-  .stations { grid-template-columns: 1fr; }
-
-  .proof-logos { gap: 20px 28px; }
-}
-
-/* ── Scroll Reveal ── */
-.reveal {
-  opacity: 0;
-  transform: translateY(16px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
-}
-
-.reveal.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* ── Footer ── */
-footer {
-  padding: 40px 0;
-  border-top: 1px solid var(--border-light);
-}
-
-footer p {
-  font-size: 12px;
-  color: var(--text-muted);
-}
+/* Built on the PSC Design System (Claude Design). Layout: wide stage, two-column hero bottom-aligned, section heads left with card columns right, ink footer. */
+:root{
+--psc-ink:#0A0A0A;--psc-coal:#171716;--psc-rule-dark:#2B2B29;--psc-graphite:#5C5B57;--psc-ash:#A3A29D;--psc-rule:#D5D4CE;--psc-stone:#E7E6E1;--psc-paper:#F4F3EF;--psc-white:#FFFFFF;
+--surface-page:var(--psc-paper);--surface-card:var(--psc-white);--surface-band:var(--psc-stone);--surface-inverse:var(--psc-ink);
+--text-primary:var(--psc-ink);--text-secondary:var(--psc-graphite);--text-inverse:var(--psc-paper);--text-inverse-secondary:var(--psc-ash);
+--line:var(--psc-rule);--line-strong:var(--psc-ink);--line-inverse:var(--psc-rule-dark);--focus:var(--psc-ink);--control-hover:var(--psc-rule-dark);
+--font-display:"Newsreader",Georgia,"Times New Roman",serif;--font-text:"DM Sans","Helvetica Neue",Helvetica,sans-serif;--font-mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+--fs-hero:clamp(42px,6.2vw,88px);--fs-section:clamp(32px,4vw,56px);--fs-item:clamp(24px,2.4vw,34px);--fs-quote:clamp(20px,1.9vw,26px);--fs-lede:18px;--fs-body:16px;--fs-nav:14px;--fs-label:12px;
+--space-1:8px;--space-2:16px;--space-3:24px;--space-4:32px;--space-6:48px;--space-8:64px;--space-15:120px;
+--radius-card:24px;--radius-control:10px;--radius-pill:999px;
+--stage-max:90rem;--gutter:clamp(16px,3.75vw,54px);--copy-max:38rem;--hairline:1px;
+--dur-fast:160ms;--dur-slow:700ms;--ease-out:cubic-bezier(.2,.7,.2,1);
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+--surface-page:var(--psc-ink);--surface-card:var(--psc-coal);--surface-band:var(--psc-coal);--surface-inverse:var(--psc-paper);
+--text-primary:var(--psc-paper);--text-secondary:var(--psc-ash);--text-inverse:var(--psc-ink);--text-inverse-secondary:var(--psc-graphite);
+--line:var(--psc-rule-dark);--line-strong:var(--psc-paper);--line-inverse:var(--psc-rule);--focus:var(--psc-paper);--control-hover:var(--psc-stone);color-scheme:dark}}
+:root[data-theme="dark"]{
+--surface-page:var(--psc-ink);--surface-card:var(--psc-coal);--surface-band:var(--psc-coal);--surface-inverse:var(--psc-paper);
+--text-primary:var(--psc-paper);--text-secondary:var(--psc-ash);--text-inverse:var(--psc-ink);--text-inverse-secondary:var(--psc-graphite);
+--line:var(--psc-rule-dark);--line-strong:var(--psc-paper);--line-inverse:var(--psc-rule);--focus:var(--psc-paper);--control-hover:var(--psc-stone);color-scheme:dark}
+@media (prefers-reduced-motion:reduce){:root{--dur-fast:0ms;--dur-slow:0ms}}
+
+*{box-sizing:border-box}
+body{margin:0;background:var(--surface-page);color:var(--text-primary);font-family:var(--font-text);font-size:var(--fs-body);line-height:1.5;-webkit-font-smoothing:antialiased}
+a{color:var(--text-primary)}
+:where(a,button,input):focus-visible{outline:2px solid var(--focus);outline-offset:3px}
+
+/* type */
+.psc-hero,.psc-section,.psc-item,.psc-quote{font-family:var(--font-display);font-weight:400;color:var(--text-primary);margin:0;text-wrap:balance}
+.psc-hero{font-size:var(--fs-hero);line-height:1;letter-spacing:-0.025em}
+.psc-section{font-size:var(--fs-section);line-height:1.05;letter-spacing:-0.025em}
+.psc-item{font-size:var(--fs-item);line-height:1.1;letter-spacing:-0.02em}
+.psc-quote{font-size:var(--fs-quote);line-height:1.2;letter-spacing:-0.015em}
+.psc-hero em,.psc-section em,.psc-item em{font-style:italic}
+.psc-lede,.psc-body{font-family:var(--font-text);color:var(--text-primary);margin:0;text-wrap:pretty}
+.psc-lede{font-size:var(--fs-lede);line-height:1.45;max-width:34rem}
+.psc-body{font-size:var(--fs-body);line-height:1.5;max-width:var(--copy-max)}
+.psc-muted{color:var(--text-secondary)}
+.psc-label{font-family:var(--font-mono);font-size:var(--fs-label);line-height:1.35;letter-spacing:0.1em;text-transform:uppercase;font-variant-numeric:tabular-nums;color:var(--text-secondary);margin:0}
+
+/* layout */
+.psc-stage{max-width:var(--stage-max);margin:0 auto;padding-left:var(--gutter);padding-right:var(--gutter)}
+.psc-rule{border:0;border-top:var(--hairline) solid var(--line);margin:0}
+main.psc-stage{display:grid;gap:var(--space-15);padding-block:var(--space-8) var(--space-15)}
+.split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.5fr);gap:var(--space-8);align-items:start}
+.split>*{min-width:0}
+.head{display:grid;gap:var(--space-2);position:sticky;top:calc(env(safe-area-inset-top,0px) + 96px)}
+@media(max-width:760px){.split{grid-template-columns:minmax(0,1fr)}.head{position:static}}
+
+/* nav */
+.psc-nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;display:flex;align-items:center;justify-content:space-between;gap:var(--space-3);padding:var(--space-2) var(--gutter);background:var(--surface-card);border-bottom:var(--hairline) solid var(--line)}
+.psc-nav__logo{display:block;height:28px;width:auto;color:var(--text-primary)}
+.psc-nav__links{display:flex;flex-wrap:wrap;gap:var(--space-4);list-style:none;margin:0;padding:0}
+.psc-nav__link{font-size:var(--fs-nav);font-weight:500;text-decoration:none;padding-bottom:2px;border-bottom:var(--hairline) solid transparent}
+.psc-nav__link:hover{border-bottom-color:var(--line-strong)}
+@media(max-width:560px){.psc-nav__links{gap:var(--space-2)}}
+
+/* buttons */
+.psc-btn{display:inline-flex;align-items:center;justify-content:center;gap:var(--space-1);min-height:44px;padding:0 var(--space-3);border-radius:var(--radius-pill);border:var(--hairline) solid var(--line-strong);font-family:var(--font-text);font-size:var(--fs-nav);font-weight:500;text-decoration:none;cursor:pointer;transition:background var(--dur-fast) var(--ease-out),color var(--dur-fast) var(--ease-out),border-color var(--dur-fast) var(--ease-out)}
+.psc-btn--solid{background:var(--surface-inverse);color:var(--text-inverse)}
+.psc-btn--solid:hover{background:var(--control-hover);border-color:var(--control-hover);color:var(--text-inverse)}
+
+/* hero */
+.hero{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:var(--space-8);align-items:end;padding-top:var(--space-6)}
+.hero>*{min-width:0}
+@media(max-width:760px){.hero{grid-template-columns:minmax(0,1fr)}}
+.hero__right{display:grid;gap:var(--space-3);justify-items:start}
+.rotor{display:grid}
+.rotor .hl{grid-area:1/1;opacity:0;visibility:hidden;transform:translateY(.25em);transition:opacity var(--dur-slow) var(--ease-out),transform var(--dur-slow) var(--ease-out),visibility 0s linear var(--dur-slow)}
+.rotor .hl.is-on{opacity:1;visibility:visible;transform:none;transition:opacity var(--dur-slow) var(--ease-out),transform var(--dur-slow) var(--ease-out),visibility 0s}
+.ticks{display:flex;gap:var(--space-1);margin-top:var(--space-3)}
+.ticks i{width:28px;height:2px;background:var(--line)}
+.ticks i.is-on{background:var(--line-strong)}
+
+/* cards */
+.psc-card{background:var(--surface-card);border-radius:var(--radius-card);padding:var(--space-4);display:grid;gap:var(--space-2);align-content:start}
+.psc-card--inverse{background:var(--surface-inverse)}
+.psc-card--inverse .psc-item,.psc-card--inverse .psc-body,.psc-card--inverse .psc-quote{color:var(--text-inverse)}
+.psc-card--inverse .psc-label,.psc-card--inverse .psc-muted{color:var(--text-inverse-secondary)}
+.psc-stack{background:var(--surface-card);border-radius:var(--radius-card);overflow:hidden}
+.psc-stack>.psc-stack__item{padding:var(--space-4);display:grid;gap:var(--space-1);border-top:var(--hairline) solid var(--line)}
+.psc-stack>.psc-stack__item:first-child{border-top:0}
+.seats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--space-2);margin-top:var(--space-6)}
+.seats>*{min-width:0}
+@media(max-width:900px){.seats{grid-template-columns:minmax(0,1fr)}}
+.verdict{margin-top:var(--space-2)}
+
+/* focus */
+.focus{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--space-2)}
+.focus>*{min-width:0}
+@media(max-width:900px){.focus{grid-template-columns:minmax(0,1fr)}}
+.brands{display:grid;gap:var(--space-3)}
+.brandlist{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:var(--space-2) var(--space-6);align-items:baseline}
+.brandlist li{font-family:var(--font-display);font-size:clamp(22px,2.4vw,32px);letter-spacing:-0.01em;color:var(--text-secondary)}
+
+/* band */
+.band{background:var(--surface-band);border-radius:var(--radius-card);padding:clamp(var(--space-4),5vw,var(--space-8));display:grid;gap:var(--space-3)}
+
+/* record */
+.station{display:grid;grid-template-columns:9rem minmax(0,1fr);gap:var(--space-3)}
+.station>*{min-width:0}
+@media(max-width:520px){.station{grid-template-columns:minmax(0,1fr);gap:var(--space-1)}}
+
+/* sign up */
+.signup{display:flex;flex-wrap:wrap;gap:var(--space-1);margin-top:var(--space-1)}
+.signup input{flex:1 1 14rem;min-width:0;min-height:44px;padding:0 var(--space-2);border-radius:var(--radius-control);border:var(--hairline) solid var(--line-strong);background:transparent;color:var(--text-primary);font:inherit}
+.note{min-height:1.4em}
+
+/* footer */
+.psc-footer{background:var(--psc-ink);color:var(--psc-paper);padding:var(--space-6) var(--gutter);display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:var(--space-4)}
+.psc-footer__logo{display:block;height:72px;width:auto;color:var(--psc-paper)}
+.psc-footer .psc-label{color:var(--psc-ash)}
+.mail{font-family:var(--font-display);font-size:var(--fs-item);letter-spacing:-0.02em;color:var(--psc-paper);user-select:all;margin:0}
+.foot-r{display:grid;gap:var(--space-1);justify-items:end;text-align:right}
+@media(max-width:560px){.foot-r{justify-items:start;text-align:left}}
+.mail a{color:inherit;text-decoration:none;border-bottom:1px solid currentColor}
 </style>
 </head>
 <body>
 
 
-<!-- ═══════ NAV ═══════ -->
-<nav>
-  <div class="nav-inner">
-    <a href="#top" class="nav-brand">Pascal Staud</a>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#work">Work</a></li>
-      <li><a href="#founders">Founders</a></li>
-      <li><a href="#brands">Brands</a></li>
-      <li><a href="#cases">Cases</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-    <button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
+<nav class="psc-nav" aria-label="Main">
+  <a href="#top" aria-label="Pascal Staud, home">
+    <svg class="psc-nav__logo" viewBox="0 0 97.26 96.42" fill="currentColor" aria-hidden="true"><path d="M 15.375 96.418 L 17.105 88.77 L 76.242 88.77 L 79.664 74.051 L 20.434 74.051 L 27.223 44.027 L 97.258 44.027 L 95.527 51.68 L 37.402 51.68 L 34.074 66.398 L 92.199 66.398 L 85.41 96.418 Z"/><path d="M 0 51.684 L 6.625 22.371 L 66.688 22.371 L 70.012 7.652 L 9.953 7.652 L 11.684 0 L 81.719 0 L 74.93 30.023 L 16.031 30.023 L 11.137 51.684 Z"/></svg>
+  </a>
+  <ul class="psc-nav__links">
+    <li><a class="psc-nav__link" href="#belief">Belief</a></li>
+    <li><a class="psc-nav__link" href="#seats">Perspectives</a></li>
+    <li><a class="psc-nav__link" href="#focus">Focus</a></li>
+    <li><a class="psc-nav__link" href="#untapped">Essays</a></li>
+    <li><a class="psc-nav__link" href="#contact">Contact</a></li>
+  </ul>
 </nav>
 
+<main class="psc-stage" id="top">
 
-<!-- ═══════ HERO ═══════ -->
-<section id="top" class="s-hero" style="min-height: 80vh; display: flex; align-items: center;">
-  <div class="container">
-    <h1>Clarity that becomes<br>operational.</h1>
-    <p class="subline">Brand & Growth Architect. Principal-level. Founder-close.<br>I install the systems that let companies grow without heroics.</p>
-    <div class="mt-48">
-      <a href="#work" class="btn btn-primary">How I work <span class="arrow">&rarr;</span></a>
+  <section class="hero" aria-label="Thesis">
+    <div>
+      <p class="psc-label">Pascal Staud</p>
+      <h1 class="psc-hero rotor" id="headline" style="margin-top:var(--space-3)">
+        <span class="hl is-on">Brand is the most <em>untapped</em> asset in most companies.</span>
+        <span class="hl">The marketing model I grew up in is <em>broken</em>.</span>
+        <span class="hl">Marketing is the most <em>misunderstood</em> growth driver there is.</span>
+        <span class="hl">AI is changing how companies <em>meet</em> their customers.</span>
+      </h1>
+      <div class="ticks" aria-hidden="true"><i class="is-on"></i><i></i><i></i><i></i></div>
     </div>
-  </div>
-</section>
-
-
-<!-- ═══════ PROOF STRIP ═══════ -->
-<div class="proof-strip">
-  <div class="container">
-    <div class="proof-logos">
-      <span class="proof-logo">BMW</span>
-      <span class="proof-logo">Mercedes-AMG</span>
-      <span class="proof-logo">Pi&euml;ch</span>
-      <span class="proof-logo">HOF</span>
-      <span class="proof-logo">Aston Martin</span>
-      <span class="proof-logo">Richard Mille</span>
-      <span class="proof-logo">Infiniti</span>
+    <div class="hero__right">
+      <p class="psc-lede">I've seen marketing from three sides: the founder, the agency and the consultant. In global corporations and in ten-person companies. It showed me what marketing can do once it's connected to the right things, built on the right processes and given a seat at the right tables.</p>
+      <a class="psc-btn psc-btn--solid" href="#contact">Start a conversation</a>
     </div>
-  </div>
-</div>
+  </section>
 
+  <hr class="psc-rule">
 
-<!-- ═══════ TWO-TRACK ENTRY ═══════ -->
-<section class="s-sm">
-  <div class="container">
-    <div class="track-grid">
-      <div class="track-card">
-        <span class="tag">For founders</span>
-        <p>Positioning, narrative, GTM architecture, and a decision cadence that holds. Principal-level &mdash; not a vendor.</p>
-        <a href="#founders" class="btn btn-text">How I work with founders <span class="arrow">&rarr;</span></a>
+  <section id="belief" class="split">
+    <div class="head">
+      <p class="psc-label">What I believe</p>
+      <h2 class="psc-section">The change I <em>believe</em> in</h2>
+    </div>
+    <div style="display:grid;gap:var(--space-2)">
+      <div class="psc-stack">
+        <div class="psc-stack__item"><p class="psc-label">Lever one</p><h3 class="psc-item">Put the brand <em>first</em>.</h3><p class="psc-body psc-muted">Brand isn't a nice key visual, or a film in the right corporate design template. It shapes the product, the price and the way you go to market. And with that, what a company is worth. Most companies use a fraction of it.</p></div>
+        <div class="psc-stack__item"><p class="psc-label">Lever two</p><h3 class="psc-item">Wire marketing into <em>revenue</em>.</h3><p class="psc-body psc-muted">Marketing should be a system built into sales, not a department that executes. Marketing that sells, not marketing that decorates.</p></div>
+        <div class="psc-stack__item"><p class="psc-label">Lever three</p><h3 class="psc-item">Let AI rebuild <em>operations</em>.</h3><p class="psc-body psc-muted">AI doesn't just make the old work faster. It changes how a company meets its customers and how it runs.</p></div>
       </div>
-      <div class="track-card">
-        <span class="tag">For premium brands & OEMs</span>
-        <p>Global alignment, partner orchestration, and standards that scale. Expertise at the highest level.</p>
-        <a href="#brands" class="btn btn-text">How I work with brand teams <span class="arrow">&rarr;</span></a>
+      <div class="psc-card psc-card--inverse verdict">
+        <p class="psc-quote">Get all three right and you don't get a better campaign. You get a different company.</p>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
+  <section id="seats">
+    <div class="head" style="position:static">
+      <p class="psc-label">Twenty years</p>
+      <h2 class="psc-section">I've worn all three <em>hats</em>.</h2>
+      <p class="psc-lede" style="max-width:60ch;margin-top:var(--space-2)">So I can talk about marketing from every side: how it gets made, how to advise on it, and what it does for a company's growth. I sit at the table with owners, and I stay close to the work itself. That combination is what I bring.</p>
+    </div>
+    <div class="seats">
+      <article class="psc-card"><h3 class="psc-item">The founder</h3><p class="psc-body psc-muted">I know the owner's side. As partner in my own agency, and as co-founder of other companies, built from the inside. I know what it's like when the decisions are yours to carry.</p></article>
+      <article class="psc-card"><h3 class="psc-item">The agency</h3><p class="psc-body psc-muted">Twelve years building one, then co-founding a global one. I know how marketing gets made, and where it gets lost.</p></article>
+      <article class="psc-card"><h3 class="psc-item">The consultant</h3><p class="psc-body psc-muted">I helped companies build their marketing and agency setups, side by side with their teams. Some became very successful. Some didn't, for very different reasons. I learned as much from the second kind.</p></article>
+    </div>
+  </section>
 
-<!-- ═══════ WORK ═══════ -->
-<section id="work" class="s">
-  <div class="container">
-    <span class="tag mb-48" style="display:block;">What I install</span>
-    <h2>Not a service menu.<br>An operating sequence.</h2>
-    <p class="subline">Market frame &rarr; narrative &rarr; GTM architecture &rarr; decision cadence &rarr; standards.</p>
+  <section id="focus" class="split" aria-label="Focus">
+    <div class="head">
+      <p class="psc-label">Focus</p>
+      <h2 class="psc-section">Where I do my best <em>work</em></h2>
+      <p class="psc-lede psc-muted" style="margin-top:var(--space-2)">I've worked for BMW, Mercedes-AMG, Aston Martin, Infiniti and Richard Mille. Some of the most demanding brands there are. That's where my standard comes from.</p>
+    </div>
+    <div class="focus">
+      <article class="psc-card"><h3 class="psc-item">Automotive and mobility</h3><p class="psc-body psc-muted">Where my track record runs deepest. Premium and performance brands, and the new players changing how people move.</p></article>
+      <article class="psc-card"><h3 class="psc-item">Luxury and direct-to-consumer</h3><p class="psc-body psc-muted">Products people buy with emotion, at a price that has to be earned. More and more, sold directly.</p></article>
+      <article class="psc-card"><h3 class="psc-item">Tech and digital startups</h3><p class="psc-body psc-muted">I understand the technology, so the brand gets built around the product, not painted on top of it.</p></article>
+      <article class="psc-card"><h3 class="psc-item">Health and healthcare</h3><p class="psc-body psc-muted">A growing focus. Markets where trust is the product, and where good marketing is still rare.</p></article>
+    </div>
+  </section>
 
-    <div class="pillar-grid mt-48 reveal">
-      <div class="pillar">
-        <h3>Direction & Offer Architecture</h3>
-        <p>Positioning. Category design. Offer logic. What you do, what you stop, why someone buys.</p>
-      </div>
-      <div class="pillar">
-        <h3>Growth System</h3>
-        <p>Channels, targeting, partnerships. Messaging that sales uses. KPI cadence that surfaces reality.</p>
-      </div>
-      <div class="pillar">
-        <h3>Decision System</h3>
-        <p>Owner per workstream. Definition of done. A weekly exec that produces decisions, not status updates.</p>
-      </div>
-      <div class="pillar">
-        <h3>Team Architecture</h3>
-        <p>Roles by accountability. An operator layer that holds timelines. Standards so quality is repeatable.</p>
+  <section class="band" aria-label="Why Vntapped">
+    <p class="psc-label">Why Vntapped</p>
+    <p class="psc-section" style="max-width:22ch">All three perspectives taught me the same thing: marketing can be built <em>differently</em>.</p>
+    <p class="psc-lede psc-muted">Vntapped is how I'm doing it.</p>
+  </section>
+
+  <section id="record" class="split">
+    <div class="head">
+      <p class="psc-label">Where I've been</p>
+      <h2 class="psc-section">The <em>record</em></h2>
+    </div>
+    <div>
+      <div class="psc-stack">
+        <div class="psc-stack__item station"><p class="psc-label">Since 2026</p><div><h3 class="psc-item" style="font-size:24px">Pascal Staud Consulting</h3><p class="psc-body psc-muted">Advising owners and brands</p></div></div>
+        <div class="psc-stack__item station"><p class="psc-label">2021 to 2025</p><div><h3 class="psc-item" style="font-size:24px">Monks</h3><p class="psc-body psc-muted">Co-founder, shareholder. Global marketing services, 6,000+ people.</p></div></div>
+        <div class="psc-stack__item station"><p class="psc-label">2009 to 2021</p><div><h3 class="psc-item" style="font-size:24px">STAUD STUDIOS</h3><p class="psc-body psc-muted">Managing Director and Partner. My own company, built from 25 to 100 people.</p></div></div>
+        <div class="psc-stack__item station"><p class="psc-label">Education</p><div><h3 class="psc-item" style="font-size:24px">Zeppelin University · Tongji University Shanghai</h3><p class="psc-body psc-muted">Corporate Management &amp; Economics. Chinese Studies.</p></div></div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-
-<div class="container"><div class="spacer-line"></div></div>
-
-
-<!-- ═══════ ENGAGEMENT MODELS ═══════ -->
-<section class="s">
-  <div class="container">
-    <h2>How engagements work</h2>
-    <div class="model-grid reveal">
-      <div class="model-card">
-        <h3>Retained</h3>
-        <p class="model-sub">Principal continuity</p>
-        <p class="desc">12+ months. Weekly cadence. I stay until the system runs without me.</p>
+  <section class="split" id="untapped">
+    <div class="head">
+      <p class="psc-label">Work and writing</p>
+      <h2 class="psc-section">Few, and by <em>conviction</em></h2>
+    </div>
+    <div style="display:grid;gap:var(--space-2)">
+      <div class="psc-card">
+        <p class="psc-label">How I work</p>
+        <p class="psc-quote">I advise a small number of owners and brands. Selectively, and only where I believe in the case.</p>
       </div>
-      <div class="model-card">
-        <h3>Project Advisory</h3>
-        <p class="model-sub">High-stakes moments</p>
-        <p class="desc">Repositioning, launch, market entry. Intensive, then done.</p>
-      </div>
-      <div class="model-card">
-        <h3>Hybrid</h3>
-        <p class="model-sub">Retained + equity</p>
-        <p class="desc">Retainer plus equity. My upside is your upside.</p>
+      <div class="psc-card">
+        <p class="psc-label">Monthly essay</p>
+        <h3 class="psc-item"><em>Untapped</em></h3>
+        <p class="psc-body psc-muted">A monthly essay on where brand value hides, and what it's worth.</p>
+        <form class="signup" id="signup" novalidate>
+          <label for="email" class="psc-label" style="flex-basis:100%">Your email</label>
+          <input id="email" name="email" type="email" placeholder="name@company.com" autocomplete="email">
+          <button class="psc-btn psc-btn--solid" type="submit">Sign up</button>
+        </form>
+        <p class="psc-label note" id="note" aria-live="polite"></p>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
+</main>
 
-<!-- ═══════ DARK CTA ═══════ -->
-<section class="s-dark" style="padding: 80px 0; text-align: center;">
-  <div class="container">
-    <h2 class="light">The right conversation<br>starts with clarity.</h2>
-    <div class="mt-32">
-      <a href="#contact" class="btn btn-light">Start a conversation <span class="arrow">&rarr;</span></a>
-    </div>
-  </div>
-</section>
-
-
-<!-- ═══════ FOUNDERS ═══════ -->
-<section id="founders" class="s">
-  <div class="container">
-    <span class="tag" style="display:block; margin-bottom: 16px;">For founders</span>
-    <h2>You don't need another advisor.<br>You need architecture.</h2>
-
-    <div class="mt-32" style="max-width: 600px;">
-      <p class="body">Most ventures don't lack ambition. They lack the operating layer between ambition and execution. I work alongside founders &mdash; not above, not behind. Market frame, narrative, GTM architecture, decision cadence, standards.</p>
-      <p class="body">Not consultancy. Not an agency. A hybrid growth accelerator &mdash; capital-aware, execution-grade, committed to the same outcome you are.</p>
-    </div>
-  </div>
-</section>
-
-
-<div class="container"><div class="spacer-line"></div></div>
-
-
-<!-- ═══════ CLV / VALUE FRAMEWORK ═══════ -->
-<section class="s">
-  <div class="container">
-    <span class="tag" style="display:block; margin-bottom: 16px;">The model</span>
-    <h2>Private equity thinking<br>applied to marketing.</h2>
-
-    <div class="mt-24" style="max-width: 600px;">
-      <p class="body">Marketing is the strongest value driver &mdash; and the most underutilized. I treat every mandate as a value creation exercise. Equity entitlement tied to defined uplift, not hours billed.</p>
-      <p class="body">One to two mandates per year. I grow with them. I stay until the system runs.</p>
-    </div>
-
-    <div class="value-cols reveal">
-      <div class="value-card">
-        <p class="val-num">01</p>
-        <h3>Entry Value</h3>
-        <p>Revenue, customer base, brand awareness. Where the company stands before we start.</p>
-      </div>
-      <div class="value-card">
-        <p class="val-num">02</p>
-        <h3>Contribution Value</h3>
-        <p>Brand strength, conversion uplift, capital efficiency. The measurable delta my architecture creates.</p>
-      </div>
-      <div class="value-card">
-        <p class="val-num">03</p>
-        <h3>Realized Value</h3>
-        <p>Exit valuation or next round multiple. Equity = percentage of defined uplift.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<div class="container"><div class="spacer-line"></div></div>
-
-
-<!-- ═══════ THE PROCESS ═══════ -->
-<section class="s">
-  <div class="container">
-    <span class="tag" style="display:block; margin-bottom: 16px;">The process</span>
-    <h2>From alignment to exit.</h2>
-
-    <div class="process-steps reveal">
-      <div class="process-step active-step">
-        <p class="step-num">01</p>
-        <h4>Synchronize</h4>
-        <p>Reality check. Marketing maturity. Operational baseline.</p>
-      </div>
-      <div class="process-step active-step">
-        <p class="step-num">02</p>
-        <h4>Strategize</h4>
-        <p>Growth roadmap, valuation logic, GTM strategy.</p>
-      </div>
-      <div class="process-step active-step">
-        <p class="step-num">03</p>
-        <h4>Simulate</h4>
-        <p>Model investment impact. Refine strategy. Set milestones.</p>
-      </div>
-      <div class="process-step active-step">
-        <p class="step-num">04</p>
-        <h4>Steer</h4>
-        <p>Build teams. Onboard partners. Run the system.</p>
-      </div>
-      <div class="process-step">
-        <p class="step-num">05</p>
-        <h4>Support & Exit</h4>
-        <p>Transition to advisory. Or full exit when the system holds.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- ═══════ BRANDS / OEM ═══════ -->
-<section id="brands" class="s-warm" style="padding: 120px 0;">
-  <div class="container">
-    <span class="tag" style="display:block; margin-bottom: 16px;">For premium brands</span>
-    <h2>Your brand has global standards.<br>Your partners should meet them.</h2>
-
-    <div class="mt-32" style="max-width: 600px;">
-      <p class="body">Brand standards into operational reality &mdash; across partners, markets, and production pipelines. BMW. Mercedes-AMG. Pi&euml;ch. Aston Martin. The mandate varies. The standard does not.</p>
-    </div>
-
-    <div class="pillar-grid mt-48 reveal">
-      <div class="pillar">
-        <h3>Global Alignment</h3>
-        <p>Partners, production, regional execution &mdash; orchestrated to one standard.</p>
-      </div>
-      <div class="pillar">
-        <h3>Clear Direction</h3>
-        <p>One brief, one standard, one accountable person.</p>
-      </div>
-      <div class="pillar">
-        <h3>Delivery Reliability</h3>
-        <p>On time, on quality, at scale. Documented and enforceable.</p>
-      </div>
-      <div class="pillar">
-        <h3>Orchestration</h3>
-        <p>Lead agency advisory, campaign architecture, partner alignment.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- ═══════ CASES ═══════ -->
-<section id="cases" class="s">
-  <div class="container">
-    <span class="tag" style="display:block; margin-bottom: 16px;">Selected work</span>
-    <h2>Five mandates. Same discipline.</h2>
-    <p class="subline">Different contexts. Same operating sequence: clarity, architecture, decisions, standards.</p>
-
-    <!-- BMW -->
-    <div class="case-block reveal">
-      <span class="tag case-tag" style="display:block;">OEM / Campaign Architecture</span>
-      <h3>BMW &mdash; Building the Marketing Engine</h3>
-      <p class="case-body">World-class products, outdated go-to-market system. Campaigns disconnected across European markets. I designed a unified MarCom Engine connecting strategy, content, and media execution.</p>
-      <div class="case-kpis">
-        <div class="case-kpi">
-          <p class="kpi-label">Process</p>
-          <p>Reduced rollout time and content duplication across EU markets</p>
-        </div>
-        <div class="case-kpi">
-          <p class="kpi-label">Alignment</p>
-          <p>Unified MarCom playbook: brand, performance, media</p>
-        </div>
-        <div class="case-kpi">
-          <p class="kpi-label">Data</p>
-          <p>Closed feedback loop: creative, spend, performance</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Mercedes-AMG -->
-    <div class="case-block reveal">
-      <span class="tag case-tag" style="display:block;">OEM / Orchestration</span>
-      <h3>Mercedes-AMG &mdash; Global Lead Agency Advisory</h3>
-      <p class="case-body">Brand standards non-negotiable, execution complexity extreme. Advised on global lead agency alignment &mdash; brand direction, agency delivery, production quality across markets.</p>
-      <div class="case-kpis">
-        <div class="case-kpi">
-          <p class="kpi-label">Framework</p>
-          <p>Agency alignment architecture across global markets</p>
-        </div>
-        <div class="case-kpi">
-          <p class="kpi-label">Quality</p>
-          <p>Production governance at AMG performance standards</p>
-        </div>
-        <div class="case-kpi">
-          <p class="kpi-label">Cadence</p>
-          <p>Global delivery rhythm with clear accountability</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Piëch -->
-    <div class="case-block reveal">
-      <span class="tag case-tag" style="display:block;">Founder-led / Brand Repositioning</span>
-      <h3>Pi&euml;ch &mdash; Back on the Investor Radar</h3>
-      <p class="case-body">Lost investor visibility, fading brand traction. Repositioned the founder story and built a content-driven brand engine to reignite Pi&euml;ch as the next cult sports car brand.</p>
-      <div class="case-kpis">
-        <div class="case-kpi">
-          <p class="kpi-label">Brand Reset</p>
-          <p>Re-entered investor and media radar across key outlets</p>
-        </div>
-        <div class="case-kpi">
-          <p class="kpi-label">Content</p>
-          <p>High-impact, low-cost brand engine across film, podcast, web, and press</p>
-        </div>
-        <div class="case-kpi">
-          <p class="kpi-label">Capital</p>
-          <p>First investors reactivated, &euro;50M A2-Series in active pipeline</p>
-        </div>
-      </div>
-      <div class="case-quote">
-        <p>&ldquo;Without the help of Pascal we would have ended up in nowhere land. We weren't on any investor radar anymore.&rdquo;</p>
-        <p class="quote-attr">Tobias Moers, CEO</p>
-      </div>
-    </div>
-
-    <!-- HOF -->
-    <div class="case-block reveal">
-      <span class="tag case-tag" style="display:block;">Founder-led / Brand & Growth</span>
-      <h3>HOF &mdash; From Tuner to Luxury Automotive Brand</h3>
-      <p class="case-body">Decades of coachbuilding heritage, untapped luxury potential. Repositioned HOF as the haute couture of automotive &mdash; founder storytelling, strategic collections, brand-building at the intersection of automotive, fashion, and culture.</p>
-      <div class="case-kpis">
-        <div class="case-kpi">
-          <p class="kpi-label">Brand</p>
-          <p>New platform anchored in &ldquo;German Craftsmanship meets Cultural Luxury&rdquo;</p>
-        </div>
-        <div class="case-kpi">
-          <p class="kpi-label">System</p>
-          <p>Modular content, CRM, website, and showroom-ready dealer toolkit</p>
-        </div>
-        <div class="case-kpi">
-          <p class="kpi-label">Traction</p>
-          <p>Emirates Motor Company partnership signed, active investor conversations</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- AERA -->
-    <div class="case-block reveal">
-      <span class="tag case-tag" style="display:block;">Founder-led / Health &amp; Venture</span>
-      <h3>AERA Health &mdash; The Operating System for Longevity</h3>
-      <p class="case-body">Strong founding vision, no go-to-market model or investor positioning. Transformed AERA from idea to high-conviction, scalable health tech venture.</p>
-      <div class="case-kpis">
-        <div class="case-kpi">
-          <p class="kpi-label">Positioning</p>
-          <p>AERA defined as the &ldquo;OS for Longevity&rdquo; &mdash; medically credible, emotionally aspirational</p>
-        </div>
-        <div class="case-kpi">
-          <p class="kpi-label">GTM</p>
-          <p>Signature City model defined; first ecosystem live in London</p>
-        </div>
-        <div class="case-kpi">
-          <p class="kpi-label">Capital</p>
-          <p>&euro;750K bridge round in motion with pitch material and investor funnel live</p>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-
-<!-- ═══════ ABOUT ═══════ -->
-<section id="about" class="s-warm" style="padding: 120px 0;">
-  <div class="container">
-    <span class="tag" style="display:block; margin-bottom: 16px;">About</span>
-    <h2>Pascal Staud.</h2>
-    <p class="subline">Brand & Growth Architect. Principal-level. Founder-close.</p>
-
-    <div class="mt-32" style="max-width: 600px;">
-      <p class="body">15 years at the intersection of premium brands and founder-led ventures &mdash; as strategist, operator, and architect. BMW, Mercedes-AMG, Pi&euml;ch, Aston Martin on the OEM side. HOF and AERA on the venture side. I install systems and stay until they hold.</p>
-    </div>
-
-    <div class="principles-block reveal">
-      <p>Decisions, not discussions.<br>
-      Owners, not committees.<br>
-      Reality, not narratives.<br>
-      Standards, not taste.<br>
-      Systems, not heroes.</p>
-    </div>
-
-    <div class="stations reveal">
-      <div class="station">
-        <h4>Pascal Staud Consulting</h4>
-        <p class="station-role">Brand & Growth Architect &middot; 2024 &ndash; present</p>
-        <p>Principal-level mandates across automotive, luxury, and health. Retained + equity model.</p>
-      </div>
-      <div class="station">
-        <h4>Monks (MediaMonks)</h4>
-        <p class="station-role">Co-Founder &middot; 2021 &ndash; 2025</p>
-        <p>Global marketing service company. 7,000+ team across all disciplines.</p>
-      </div>
-      <div class="station">
-        <h4>STAUD STUDIOS</h4>
-        <p class="station-role">Managing Director &middot; 2009 &ndash; 2021</p>
-        <p>Marketing service company. Automotive and luxury focus. Grew from 25 to 100.</p>
-      </div>
-      <div class="station">
-        <h4>Education</h4>
-        <p class="station-role">Zeppelin University &middot; Tongji University Shanghai</p>
-        <p>BA Corporate Management & Economics. Additional studies in Chinese Studies.</p>
-      </div>
-    </div>
-
-    <p class="body mt-48" style="color: var(--text-muted); font-size: 14px;">Based in Germany. Working internationally.<br>Currently taking select retained mandates.</p>
-  </div>
-</section>
-
-
-<!-- ═══════ CONTACT ═══════ -->
-<section id="contact" class="s">
-  <div class="container">
-    <span class="tag" style="display:block; margin-bottom: 16px;">Contact</span>
-    <h2>The right engagement starts<br>with a clear conversation.</h2>
-
-    <div class="mt-24" style="max-width: 560px;">
-      <p class="body">No intake forms. No sales funnel. One conversation to determine fit.</p>
-    </div>
-
-    <div class="mt-32">
-      <a href="mailto:ps@pascalstaud.com" class="btn btn-primary">Write to me <span class="arrow">&rarr;</span></a>
-    </div>
-
-    <div class="qualifier">
-      <p class="q-label">This works best when:</p>
-      <p>There is a real owner who makes and holds decisions.<br>
-      The ambition is clear, even if the path is not.<br>
-      You are willing to stop things that don't serve the direction.<br>
-      You value standards over speed.</p>
-    </div>
-  </div>
-</section>
-
-
-<!-- ═══════ FOOTER ═══════ -->
-<footer>
-  <div class="container">
-    <p>&copy; 2026 Pascal Staud</p>
+<footer class="psc-footer" id="contact">
+  <svg class="psc-footer__logo" viewBox="0 0 475.79 182.06" fill="currentColor" role="img" aria-label="Pascal Staud"><path d="M 5.402 157.629 L 15.434 157.629 C 21.434 157.629 24.434 155.055 24.434 149.914 L 24.434 148.754 C 24.434 146.484 23.695 144.652 22.215 143.258 C 20.738 141.867 18.477 141.168 15.434 141.168 L 5.402 141.168 Z M 0 181.164 L 0 136.152 L 16.074 136.152 C 19.164 136.152 21.723 136.723 23.762 137.855 C 25.797 138.992 27.316 140.48 28.324 142.324 C 29.332 144.168 29.836 146.184 29.836 148.371 L 29.836 150.297 C 29.836 152.484 29.32 154.52 28.293 156.406 C 27.266 158.293 25.73 159.805 23.695 160.941 C 21.66 162.078 19.117 162.645 16.074 162.645 L 5.402 162.645 L 5.402 181.164 Z"/><path d="M 47.273 164.957 L 63.605 164.957 L 55.824 138.465 L 55.055 138.465 Z M 36.73 181.164 L 50.359 136.152 L 60.52 136.152 L 74.152 181.164 L 68.363 181.164 L 65.086 169.973 L 45.797 169.973 L 42.516 181.164 Z"/><path d="M 100.934 182.062 C 97.074 182.062 93.836 181.344 91.223 179.91 C 88.609 178.473 86.625 176.512 85.277 174.023 C 83.926 171.539 83.25 168.73 83.25 165.602 L 83.25 163.672 L 88.652 163.672 L 88.652 165.215 C 88.652 169.117 89.742 172.062 91.93 174.059 C 94.117 176.051 97.117 177.047 100.934 177.047 C 104.277 177.047 106.793 176.297 108.488 174.797 C 110.18 173.297 111.027 171.348 111.027 168.945 L 111.027 168.559 C 111.027 166.203 110.16 164.402 108.422 163.156 C 106.688 161.914 103.867 161.016 99.969 160.457 C 95.469 159.816 91.875 158.539 89.199 156.633 C 86.52 154.727 85.18 151.84 85.18 147.984 L 85.18 147.211 C 85.18 144.855 85.812 142.785 87.074 141.008 C 88.34 139.23 90.086 137.824 92.316 136.797 C 94.543 135.766 97.117 135.25 100.031 135.25 C 103.418 135.25 106.301 135.875 108.68 137.117 C 111.059 138.359 112.883 140 114.148 142.035 C 115.41 144.074 116.043 146.312 116.043 148.754 L 116.043 151.457 L 110.641 151.457 L 110.641 149.141 C 110.641 147.168 110.148 145.531 109.164 144.223 C 108.176 142.914 106.867 141.93 105.242 141.262 C 103.609 140.602 101.855 140.27 99.969 140.27 C 98.34 140.27 96.805 140.547 95.371 141.105 C 93.934 141.66 92.777 142.465 91.898 143.516 C 91.02 144.566 90.578 145.863 90.578 147.406 L 90.578 147.789 C 90.578 150.277 91.586 152.09 93.602 153.223 C 95.617 154.359 98.641 155.227 102.668 155.828 C 107.383 156.512 110.855 157.887 113.086 159.941 C 115.312 162 116.43 164.746 116.43 168.172 L 116.43 168.945 C 116.43 172.848 115.109 176.008 112.473 178.43 C 109.836 180.852 105.988 182.062 100.934 182.062"/><path d="M 144.812 182.062 C 139.883 182.062 136.012 180.488 133.207 177.336 C 130.395 174.188 128.992 169.633 128.992 163.672 L 128.992 153.641 C 128.992 147.855 130.395 143.344 133.207 140.105 C 136.012 136.871 139.883 135.25 144.812 135.25 C 148.238 135.25 151.133 135.98 153.492 137.438 C 155.848 138.895 157.629 140.859 158.828 143.32 C 160.027 145.785 160.629 148.543 160.629 151.586 L 160.629 152.355 L 155.227 152.355 L 155.227 151.586 C 155.184 149.613 154.809 147.77 154.102 146.055 C 153.395 144.34 152.281 142.945 150.758 141.875 C 149.234 140.805 147.254 140.27 144.812 140.27 C 141.34 140.27 138.734 141.531 137 144.062 C 135.262 146.59 134.395 149.91 134.395 154.027 L 134.395 163.285 C 134.395 167.66 135.262 171.047 137 173.445 C 138.734 175.848 141.34 177.047 144.812 177.047 C 147.254 177.047 149.25 176.512 150.793 175.441 C 152.336 174.367 153.461 172.977 154.168 171.258 C 154.875 169.547 155.227 167.703 155.227 165.73 L 155.227 164.957 L 160.629 164.957 L 160.629 165.73 C 160.629 168.773 160.027 171.527 158.828 173.992 C 157.629 176.457 155.848 178.418 153.492 179.875 C 151.133 181.332 148.238 182.062 144.812 182.062"/><path d="M 180.66 164.957 L 196.992 164.957 L 189.211 138.465 L 188.441 138.465 Z M 170.113 181.164 L 183.746 136.152 L 193.906 136.152 L 207.535 181.164 L 201.75 181.164 L 198.469 169.973 L 179.18 169.973 L 175.902 181.164 Z"/><path d="M 219.723 181.164 L 219.723 136.152 L 225.121 136.152 L 225.121 176.148 L 248.656 176.148 L 248.656 181.164 Z"/><path d="M 290.258 182.062 C 286.398 182.062 283.16 181.344 280.547 179.91 C 277.934 178.473 275.949 176.512 274.602 174.023 C 273.25 171.539 272.574 168.73 272.574 165.602 L 272.574 163.672 L 277.977 163.672 L 277.977 165.215 C 277.977 169.117 279.07 172.062 281.254 174.059 C 283.441 176.051 286.441 177.047 290.258 177.047 C 293.602 177.047 296.117 176.297 297.812 174.797 C 299.504 173.297 300.352 171.348 300.352 168.945 L 300.352 168.559 C 300.352 166.203 299.484 164.402 297.746 163.156 C 296.012 161.914 293.191 161.016 289.293 160.457 C 284.793 159.816 281.199 158.539 278.523 156.633 C 275.844 154.727 274.504 151.84 274.504 147.984 L 274.504 147.211 C 274.504 144.855 275.137 142.785 276.402 141.008 C 277.664 139.23 279.41 137.824 281.641 136.797 C 283.871 135.766 286.441 135.25 289.359 135.25 C 292.742 135.25 295.625 135.875 298.004 137.117 C 300.387 138.359 302.207 140 303.473 142.035 C 304.734 144.074 305.367 146.312 305.367 148.754 L 305.367 151.457 L 299.969 151.457 L 299.969 149.141 C 299.969 147.168 299.473 145.531 298.488 144.223 C 297.5 142.914 296.195 141.93 294.566 141.262 C 292.938 140.602 291.18 140.27 289.293 140.27 C 287.664 140.27 286.129 140.547 284.695 141.105 C 283.258 141.66 282.102 142.465 281.223 143.516 C 280.344 144.566 279.906 145.863 279.906 147.406 L 279.906 147.789 C 279.906 150.277 280.91 152.09 282.93 153.223 C 284.941 154.359 287.965 155.227 291.992 155.828 C 296.707 156.512 300.18 157.887 302.41 159.941 C 304.641 162 305.754 164.746 305.754 168.172 L 305.754 168.945 C 305.754 172.848 304.438 176.008 301.801 178.43 C 299.164 180.852 295.316 182.062 290.258 182.062"/><path d="M 330.047 181.164 L 330.047 141.168 L 316.93 141.168 L 316.93 136.152 L 348.566 136.152 L 348.566 141.168 L 335.445 141.168 L 335.445 181.164 Z"/><path d="M 364.043 164.957 L 380.375 164.957 L 372.594 138.465 L 371.824 138.465 Z M 353.496 181.164 L 367.129 136.152 L 377.289 136.152 L 390.918 181.164 L 385.133 181.164 L 381.855 169.973 L 362.563 169.973 L 359.285 181.164 Z"/><path d="M 416.234 182.062 C 411.477 182.062 407.715 180.68 404.949 177.914 C 402.188 175.148 400.801 171.176 400.801 165.988 L 400.801 136.152 L 406.203 136.152 L 406.203 165.988 C 406.203 169.586 407.063 172.332 408.777 174.219 C 410.488 176.105 412.977 177.047 416.234 177.047 C 419.535 177.047 422.031 176.105 423.727 174.219 C 425.418 172.332 426.266 169.586 426.266 165.988 L 426.266 136.152 L 431.668 136.152 L 431.668 165.988 C 431.668 171.176 430.285 175.148 427.52 177.914 C 424.754 180.68 420.992 182.062 416.234 182.062"/><path d="M 454.184 176.148 L 458.941 176.148 C 461.555 176.148 463.711 175.793 465.402 175.086 C 467.098 174.379 468.352 173.148 469.164 171.391 C 469.98 169.633 470.387 167.188 470.387 164.059 L 470.387 153.258 C 470.387 150.129 469.98 147.684 469.164 145.926 C 468.352 144.168 467.098 142.938 465.402 142.227 C 463.711 141.52 461.555 141.168 458.941 141.168 L 454.184 141.168 Z M 444.926 181.164 L 444.926 176.082 L 448.785 176.082 L 448.785 141.168 L 444.926 141.168 L 444.926 136.152 L 459.715 136.152 C 465.246 136.152 469.305 137.492 471.898 140.172 C 474.492 142.852 475.789 147.082 475.789 152.871 L 475.789 164.445 C 475.789 170.23 474.492 174.465 471.898 177.145 C 469.305 179.824 465.246 181.164 459.715 181.164 Z"/><path d="M 204.641 96.418 L 206.371 88.77 L 265.508 88.77 L 268.93 74.051 L 209.699 74.051 L 216.488 44.027 L 286.523 44.027 L 284.793 51.68 L 226.668 51.68 L 223.34 66.398 L 281.465 66.398 L 274.676 96.418 Z"/><path d="M 189.266 51.684 L 195.891 22.371 L 255.953 22.371 L 259.277 7.652 L 199.219 7.652 L 200.949 0 L 270.984 0 L 264.195 30.023 L 205.297 30.023 L 200.402 51.684 Z"/></svg>
+  <div class="foot-r">
+    <p class="psc-label">If something here resonates, write to me.</p>
+    <p class="mail"><a id="mail" href="#contact">contact [at] pascalstaud [dot] com</a></p>
+    <p class="psc-label"><a href="https://www.linkedin.com/in/pascalstaud/" rel="me noopener" target="_blank" style="color:inherit">LinkedIn</a></p>
+    <p class="psc-label">© 2026 Pascal Staud · Based in Germany · Working internationally</p>
   </div>
 </footer>
 
-
-<!-- ═══════ JS ═══════ -->
 <script>
-// Nav hide on scroll down
-let lastY = 0;
-window.addEventListener('scroll', () => {
-  const nav = document.querySelector('nav');
-  const y = window.scrollY;
-  if (y > lastY && y > 80) nav.classList.add('hidden');
-  else nav.classList.remove('hidden');
-  lastY = y;
-}, { passive: true });
-
-// Scroll reveal
-const obs = new IntersectionObserver((entries) => {
-  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-}, { threshold: 0.08 });
-document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
-
-// Close mobile nav on link click
-document.querySelectorAll('.nav-links a').forEach(a => {
-  a.addEventListener('click', () => {
-    document.getElementById('navLinks').classList.remove('open');
-  });
+var addr = ['contact', 'pascalstaud.com'].join('@');
+(function () { var a = document.getElementById('mail'); a.href = 'mailto:' + addr; a.textContent = addr; })();
+(function () {
+  var lines = document.querySelectorAll('#headline .hl');
+  var ticks = document.querySelectorAll('.ticks i');
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduce || lines.length < 2) return;
+  var i = 0;
+  setInterval(function () {
+    lines[i].classList.remove('is-on'); ticks[i].classList.remove('is-on');
+    i = (i + 1) % lines.length;
+    lines[i].classList.add('is-on'); ticks[i].classList.add('is-on');
+  }, 5000);
+})();
+document.getElementById('signup').addEventListener('submit', function (e) {
+  e.preventDefault();
+  var v = document.getElementById('email').value.trim();
+  var note = document.getElementById('note');
+  if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v)) { note.textContent = 'Please enter a valid email address.'; return; }
+  window.location.href = 'mailto:' + addr + '?subject=' + encodeURIComponent('Untapped: sign me up') + '&body=' + encodeURIComponent('Please add ' + v + ' to Untapped.');
+  note.textContent = 'Thank you. Your mail app opens to confirm.';
 });
 </script>
 
